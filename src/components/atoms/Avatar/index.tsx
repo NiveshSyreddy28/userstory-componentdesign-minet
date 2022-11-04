@@ -1,11 +1,12 @@
 import React from 'react'
+import MuiAvatar from '@mui/material/Avatar';
 
-const Avatar = () => {
-  return (
-    <div>
-      <p>Avatar</p>
-    </div>
-  )
+interface AvatarProps {
+    src: string;
 }
 
-export default Avatar
+export const Avatar = ({src}: AvatarProps) => {
+  return (
+    <MuiAvatar src={src}/>
+  )
+}

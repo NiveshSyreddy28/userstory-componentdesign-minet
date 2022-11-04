@@ -1,11 +1,19 @@
-import React from 'react'
+import React from "react";
+import { Grid } from "@mui/material";
+import { Typography } from "../../atoms/Typography/index";
 
-const TimePeriod = () => {
+const timePeriod = ["1H", "24H", "1W", "1M", "1Y"];
+
+export const TimePeriod = () => {
   return (
-    <div>
-      <p>Time Period</p>
-    </div>
-  )
-}
-
-export default TimePeriod
+    <>
+      <Grid container direction="row">
+        {timePeriod.map((period) => (
+          <Grid item>
+            <Typography children={period} variant="h3" />
+          </Grid>
+        ))}
+      </Grid>
+    </>
+  );
+};

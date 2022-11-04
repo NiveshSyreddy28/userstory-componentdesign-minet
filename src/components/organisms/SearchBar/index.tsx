@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import TextField from '@mui/material/TextField';
 
-const SearchBar = () => {
-  return (
-    <div>
-      <p>Search Bar</p>
-    </div>
-  )
+interface SearchBarProps {
+  handleChange: () => void;
 }
 
-export default SearchBar
+export const SearchBar = (props: SearchBarProps) => {
+  return (
+    <>
+      <TextField onChange={props.handleChange} />
+    </>
+  );
+};

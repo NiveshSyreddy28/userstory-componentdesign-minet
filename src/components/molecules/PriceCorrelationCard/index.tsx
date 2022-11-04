@@ -1,11 +1,20 @@
-import React from 'react'
+import React from "react";
+import { Grid } from "@mui/material";
+import { Avatar } from "../../atoms/Avatar/index";
 
-const PriceCorrelationCard = () => {
-  return (
-    <div>
-      <p>Price Correlation Card</p>
-    </div>
-  )
+interface PriceCorrelationCardProps {
+  src: string;
 }
 
-export default PriceCorrelationCard
+export const PriceCorrelationCard = (props: PriceCorrelationCardProps) => {
+  return (
+    <div>
+      <Grid container direction="row">
+        <Grid item>
+          <Avatar src={props.src} />
+        </Grid>
+        <Grid item></Grid>
+      </Grid>
+    </div>
+  );
+};
