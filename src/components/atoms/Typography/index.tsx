@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { Children } from 'react'
 
-const Typography = () => {
-  return (
-    <div>
-      <p>Typography</p>
-    </div>
-  )
+interface TypographyProps {
+  variant : string;
+  children : string;
 }
 
-export default Typography
+export const Typography = ({variant, children}: TypographyProps) => {
+  return (
+    <Typography variant={variant}>
+      {children}
+    </Typography>
+  )
+}

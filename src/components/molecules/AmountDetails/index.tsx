@@ -1,11 +1,23 @@
 import React from 'react'
+import { Grid, Typography } from '@mui/material'
+import { Button } from '../../atoms/Button/index'
 
-const AmountDetails = () => {
-  return (
-    <div>
-      <p>Amount Details</p>
-    </div>
-  )
+interface AmountDetailsProps {
+    amount : string
 }
 
-export default AmountDetails
+export const AmountDetails = (props : AmountDetailsProps) => {
+    return (
+        <>
+            <Typography children="Amount details"/>
+            <Grid container>
+                <Grid item>
+                <Typography  children={props.amount}/>
+                </Grid>
+                <Grid item>
+                <Button children="Buy max" variant='outlined' onclick={ () => {} } />
+                </Grid>
+            </Grid>
+        </>
+    )
+}

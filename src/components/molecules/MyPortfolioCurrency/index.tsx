@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
+import { Grid } from "@mui/material";
+import { Button } from "../../atoms/Button/index";
 
-const MyPortfolioCurrency = () => {
-  return (
-    <div>
-      <p>My Portfolio Currency</p>
-    </div>
-  )
+interface MyPortfolioCurrencyProps {
+  buttons: string[];
 }
 
-export default MyPortfolioCurrency
+export const MyPortfolioCurrency = (props: MyPortfolioCurrencyProps) => {
+  return (
+    <div>
+      <Grid container direction="row">
+        {props.buttons.map((button) => (
+          <Grid item>
+            <Button children={button} variant="contained" onclick={() => {}} />
+          </Grid>
+        ))}
+      </Grid>
+    </div>
+  );
+};
