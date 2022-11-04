@@ -1,29 +1,28 @@
-import React from 'react'
-import { Grid } from '@mui/material'
-import { Avatar } from '../../atoms/Avatar/index'
-import { Typography } from '../../atoms/Typography/index'
+import React from "react";
+import { Grid } from "@mui/material";
+import { Button } from "../../atoms/Button/index";
+import { Typography } from "../../atoms/Typography/index";
 
-interface CryptoCardInterface {
-    src: string;
-    currencyName : string;
-    currencyValue : string;
-} 
-
-export const CryptoCard = (props : CryptoCardInterface) => {
+export const Footer = () => {
   return (
-    <>
-        <Grid container direction="column" >
-            <Grid item>
-                <Avatar src={props.src}/>
-            </Grid>
-            <Grid item>
-                <Typography variant='h3' children={props.currencyName}/>
-            </Grid>
-            <Grid item>
-                <Typography variant='h3' children={props.currencyValue}/>
-            </Grid>
-
+    <div>
+      <Grid container direction="row">
+        <Grid item>
+          <Typography children="Dashboard" variant="h3" />
         </Grid>
-    </>
-  )
-}
+        <Grid item>
+          <Typography children="Careers" variant="h3" />
+        </Grid>
+        <Grid item>
+          <Typography children="Legal & Privacy" variant="h3" />
+        </Grid>
+        <Grid item>
+          <Typography children="2021 Minet" variant="h3" />
+        </Grid>
+        <Grid item>
+          <Button children="Need Help" variant="outlined" onclick={() => {}} />
+        </Grid>
+      </Grid>
+    </div>
+  );
+};
