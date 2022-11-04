@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Grid } from "@mui/material";
 
 interface WatchListProps {
@@ -8,7 +8,10 @@ interface WatchListProps {
 }
 
 export const WatchList = (props: WatchListProps) => {
-  let data = [];
+  useEffect(() => {
+    // get data
+    let data = [];
+  }, []);
   return (
     <>
       <Grid container direction="row">
